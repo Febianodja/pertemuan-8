@@ -1,11 +1,11 @@
 // LATIHAN 5
-let arrayContainer = []; 
 function f(times,number){
+    let arrayContainer = []; 
     if(times < 1){
-        return [];
+        return arrayContainer;
     } else {
+        arrayContainer = f(times-1,number);
         arrayContainer.push(number);
-        f(times-1,number);
         return arrayContainer;
     }
 }
